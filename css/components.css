@@ -173,10 +173,13 @@
   .nav__socials {
     display: none;
   }
+<<<<<<< HEAD
 
   .nav__brand-name {
     display: none;
   }
+=======
+>>>>>>> 7b29bd35eafa57450a7a43addafd7af5b0b6749b
 }
 
 /* ---- Buttons ---- */
