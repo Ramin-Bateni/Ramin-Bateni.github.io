@@ -1,0 +1,66 @@
+/* =========================================================
+   ANIMATIONS.CSS — Keyframes, reveal states, micro-interactions
+   ========================================================= */
+
+/* ---- Fade/rise used by animations.js for elements without AOS ---- */
+.js-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity var(--dur-slow) var(--ease-out),
+    transform var(--dur-slow) var(--ease-out);
+}
+
+.js-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---- Project grid transition (filters.js toggles these classes) ---- */
+.project-card {
+  transition: transform var(--dur-med) var(--ease-out),
+    opacity var(--dur-med) var(--ease-out),
+    border-color var(--dur-med) var(--ease-out),
+    box-shadow var(--dur-med) var(--ease-out);
+}
+
+.project-card.is-hidden {
+  display: none;
+}
+
+.project-card.is-filtering-out {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+/* ---- Glow pulse for CTA accents ---- */
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 var(--aurora-orange-dim);
+  }
+  50% {
+    box-shadow: 0 0 24px 4px var(--aurora-orange-dim);
+  }
+}
+
+.btn--primary:focus-visible {
+  animation: glow-pulse 1.6s var(--ease-out) infinite;
+}
+
+/* ---- Counter number tick (about panel stats, if used) ---- */
+@keyframes count-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero__stat b {
+  animation: count-in var(--dur-slow) var(--ease-out) both;
+}
+
+/* Respect reduced motion globally (belt-and-suspenders with main.css) */
+@media (prefers-reduced-motion: reduce) {
+  .js-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
