@@ -120,6 +120,49 @@ export function initFab(toggle, menu) {
 }
 
 /**
+ * Highlights the nav link matching whichever section is currently
+ * most prominent in the viewport, using IntersectionObserver.
+ */
+export function initScrollSpy() {
+  const navLinks = Array.from(document.querySelectorAll('.nav__link[href^="#"]'));
+  if (!navLinks.length) return;
+
+  const linkMap = new Map();
+  const sections = [];
+
+  navLinks.forEach((link) => {
+    const id = link.getAttribute('href').slice(1);
+    const section = document.getElementById(id);
+    if (!section) return;
+    linkMap.set(id, link);
+    sections.push(section);
+  });
+
+  if (!sections.length) return;
+
+  const navHeight = parseInt(
+    getComputedStyle(document.documentElement).getPropertyValue('--nav-h') || '84',
+    10
+  );
+
+  const setActive = (id) => {
+    navLinks.forEach((link) => link.classList.remove('is-active'));
+    linkMap.get(id)?.classList.add('is-active');
+  };
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) setActive(entry.target.id);
+      });
+    },
+    { rootMargin: `-${navHeight}px 0px -60% 0px`, threshold: 0 }
+  );
+
+  sections.forEach((section) => observer.observe(section));
+}
+
+/**
  * Smoothly scrolls to an in-page anchor, accounting for the fixed nav height.
  * @param {HTMLElement} root document or a scoped container to attach listeners on
  */

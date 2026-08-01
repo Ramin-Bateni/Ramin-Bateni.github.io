@@ -7,7 +7,7 @@
 
 import { renderProjects } from './projects.js';
 import { initFilters } from './filters.js';
-import { initNavScrollState, initMobileNav, initScrollReveal, initSmoothAnchors, initFab } from './animations.js';
+import { initNavScrollState, initMobileNav, initScrollReveal, initSmoothAnchors, initFab, initScrollSpy } from './animations.js';
 import { initSpaceBackground } from './space-background.js';
 
 function initAOS() {
@@ -43,6 +43,7 @@ function bootstrap() {
   initMobileNav(navToggle, navLinks);
   initSmoothAnchors(document);
   initFab(document.getElementById('fab-toggle'), document.getElementById('fab-menu'));
+  initScrollSpy();
   setCurrentYear();
 
   if (projectsGrid) {

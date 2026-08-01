@@ -26,10 +26,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
   <!-- Styles -->
-  <link rel="stylesheet" href="css/main.css?v=21" />
-  <link rel="stylesheet" href="css/components.css?v=21" />
-  <link rel="stylesheet" href="css/sections.css?v=21" />
-  <link rel="stylesheet" href="css/animations.css?v=21" />
+  <link rel="stylesheet" href="css/main.css?v=24" />
+  <link rel="stylesheet" href="css/components.css?v=24" />
+  <link rel="stylesheet" href="css/sections.css?v=24" />
+  <link rel="stylesheet" href="css/animations.css?v=24" />
 
   <!-- AOS scroll-reveal (CSS) -->
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
@@ -61,6 +61,7 @@
       </a>
 
       <nav class="nav__links" id="nav-links" aria-label="Primary">
+        <a class="nav__link" href="#top">Home</a>
         <a class="nav__link" href="#about">About</a>
         <a class="nav__link" href="#expertise">Expertise</a>
         <a class="nav__link" href="#projects">Projects</a>
@@ -140,18 +141,21 @@
           <a class="btn btn--ghost" href="#projects">View Projects</a>
         </div>
 
-        <div class="hero__socials" style="margin: auto; text-align: center;">
-          <p>
-            <span style="color: var(--accent-2);">We were here before AI<br>Now it's one of our core tools</span>
-            <br>
-            Elite global standard; <span style="color: var(--accent);">top 1%</span> on Stack Overflow with <span style="color: var(--accent);">17.6k+</span> reputation!
+        <div class="hero__proof glass" data-aos="fade-up">
+          <p class="hero__proof-eyebrow">
+            <i data-lucide="badge-check" aria-hidden="true"></i> Verified track record — not vibe-coded
           </p>
-          <div style="display: inline-block; margin-top: 0.5rem;">
-            <a href="https://stackoverflow.com/users/1474613">
-              <img src="https://stackexchange.com/users/flair/1591354.png?site=stackoverflow&theme=dark"
-                  alt="StackOverflow flair for Ramin Bateni Parvar">
-            </a>
-          </div>
+          <p class="hero__proof-statement">
+            We were here before AI existed. Now it's one of our core tools.
+          </p>
+          <p class="hero__proof-stat">
+            Top 1% on Stack Overflow with <strong>17.6k+</strong> reputation — earned over
+            14+ years, long before AI-assisted coding.
+          </p>
+          <a class="hero__proof-badge" href="https://stackoverflow.com/users/1474613" target="_blank" rel="noopener noreferrer">
+            <img src="https://stackexchange.com/users/flair/1591354.png?site=stackoverflow&theme=dark"
+                alt="StackOverflow flair for Ramin Bateni Parvar">
+          </a>
         </div>
 
         <dl class="hero__stats">
@@ -480,6 +484,6 @@
   <!-- Scripts -->
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script type="module" src="js/main.js?v=21"></script>
+  <script type="module" src="js/main.js?v=24"></script>
 </body>
 </html>
