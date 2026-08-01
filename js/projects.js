@@ -9,60 +9,36 @@
 /** @type {Project[]} */
 export const PROJECTS = [
   {
-    id: 'proj-ai-ops',
-    title: 'AI Ops Copilot',
-    category: ['ai', 'backend', 'product'],
+    id: 'proj-meta-trend',
+    title: 'AI Meta Trend Products',
+    category: ['ai', 'automation', 'fullstack', 'architecture'],
     description:
-      'An internal copilot that reads infrastructure telemetry and drafts incident summaries, cutting mean time to diagnosis for on-call engineers.',
-    tech: ['Node.js', 'NestJS', 'PostgreSQL', 'Redis', 'AI tools'],
-    demoUrl: '#',
-    codeUrl: '#',
+      'A multi-agent pipeline that discovers trending Meta ad products from a user-defined search: a rate-limited backend crawler queries the Facebook Ads Library, deduplicates results, then hands each candidate to a chain of specialized AI agents — product images, pricing, estimated size/weight, review sentiment — before a final agent scores it as an investment opportunity. Enriched results stream to a live dashboard over SignalR, each product opening into a full gallery with side-by-side ad and product-page detail.',
+    tech: ['ASP.NET Core', 'Angular', 'n8n', 'SignalR', 'Facebook Ads API', 'Multi-Agent AI'],
   },
   {
-    id: 'proj-fintrack',
-    title: 'FinTrack Platform',
-    category: ['fullstack', 'architecture'],
+    id: 'proj-market-research',
+    title: 'AI Market Research Module',
+    category: ['ai', 'automation'],
     description:
-      'A multi-tenant financial reporting platform built for scale — event-driven services, role-based access, and real-time dashboards for enterprise clients.',
-    tech: ['ASP.NET Core', 'React', 'Azure', 'Docker', 'PostgreSQL'],
-    demoUrl: '#',
-    codeUrl: '#',
+      'An AI-driven n8n workflow that surfaces trending products across Amazon and other major marketplaces, built to give clients an early read on what to source next.',
+    tech: ['n8n', 'AI Agents', 'Web Scraping'],
   },
   {
-    id: 'proj-commerce-ui',
-    title: 'Storefront Design System',
-    category: ['frontend', 'ui-ux'],
+    id: 'proj-lead-finder',
+    title: 'AI Business Lead Finder',
+    category: ['ai', 'automation'],
     description:
-      'A component library and design system for a headless commerce storefront, built for consistency across five regional brand sites.',
-    tech: ['Next.js', 'TypeScript', 'React'],
-    demoUrl: '#',
-    codeUrl: '#',
+      'An n8n workflow that finds qualified business leads for a given industry and geographic area, using the Google Places API and AI-driven analysis of customer reviews.',
+    tech: ['n8n', 'Google Places API', 'AI Agents'],
   },
   {
-    id: 'proj-realtime-chat',
-    title: 'Realtime Support Console',
-    category: ['fullstack', 'backend'],
+    id: 'proj-more-soon',
+    title: 'More Case Studies — Coming Soon',
+    category: ['product'],
     description:
-      'A support console with live chat, presence, and queueing built on WebSockets — designed to stay responsive under high concurrent load.',
-    tech: ['Node.js', 'MongoDB', 'Redis', 'Docker'],
-    codeUrl: '#',
-  },
-  {
-    id: 'proj-vision-pipeline',
-    title: 'Document Vision Pipeline',
-    category: ['ai', 'architecture'],
-    description:
-      'An OCR and classification pipeline that ingests scanned documents and routes structured data into downstream business systems automatically.',
-    tech: ['Python', 'AI tools', 'Azure', 'PostgreSQL'],
-  },
-  {
-    id: 'proj-design-collab',
-    title: 'Design-Engineering Handoff Tool',
-    category: ['ui-ux', 'product'],
-    description:
-      'An internal tool that syncs design tokens from Figma directly into a shared codebase, keeping design and engineering in lockstep release after release.',
-    tech: ['TypeScript', 'Next.js', 'React'],
-    codeUrl: '#',
+      'Additional products and modules from ZeroOneTech and other engagements, added here as NDA clearance allows.',
+    tech: [],
   },
 ];
 

@@ -245,7 +245,7 @@
 
   .hero__banner-overlay > div {
     border-left-width: 4px;
-    padding: 15px 10px;;
+    padding: 15px 10px;
   }
 
   .hero__content {
@@ -310,6 +310,20 @@
 }
 
 /* ---- Expertise ---- */
+.expertise__tier-label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  margin-bottom: var(--space-sm);
+}
+
+.expertise__tier-label--secondary {
+  color: var(--text-tertiary);
+  margin-top: var(--space-xl);
+}
+
 .expertise__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -318,6 +332,14 @@
   border: 1px solid var(--hairline);
   border-radius: var(--radius-lg);
   overflow: hidden;
+}
+
+.expertise__grid--primary {
+  border-color: var(--aurora-orange-dim);
+}
+
+.expertise__grid--secondary {
+  opacity: 0.88;
 }
 
 .expertise__item {
@@ -330,6 +352,33 @@
 
 .expertise__item:hover {
   background: #10141f;
+}
+
+.expertise__item--primary h3 {
+  font-size: 1.15rem;
+}
+
+.expertise__item--primary .expertise__icon {
+  background: linear-gradient(135deg, var(--aurora-orange), var(--aurora-cyan));
+  color: var(--void);
+}
+
+.expertise__grid--secondary .expertise__item h3 {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.expertise__grid--secondary .expertise__icon {
+  width: 36px;
+  height: 36px;
+  background: transparent;
+  border: 1px solid var(--glass-border);
+  color: var(--text-tertiary);
+}
+
+.expertise__grid--secondary .expertise__icon svg {
+  width: 18px;
+  height: 18px;
 }
 
 .expertise__icon {
@@ -546,6 +595,52 @@
 }
 
 /* ---- Contact ---- */
+/* ---- Testimonials ---- */
+.testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-md);
+}
+
+.testimonial {
+  background: var(--surface);
+  border: 1px solid var(--glass-border);
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.testimonial__icon {
+  width: 28px;
+  height: 28px;
+  color: var(--aurora-orange-dim);
+  opacity: 0.6;
+}
+
+.testimonial__quote {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  line-height: 1.5;
+  color: var(--text-primary);
+}
+
+.testimonial__author {
+  display: grid;
+  gap: 2px;
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--hairline);
+}
+
+.testimonial__name {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.testimonial__role {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--text-tertiary);
+}
+
 .contact {
   text-align: center;
 }
