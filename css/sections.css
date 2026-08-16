@@ -411,6 +411,7 @@
   padding: var(--space-lg);
   display: grid;
   gap: var(--space-sm);
+  align-content: baseline;
   transition: background var(--dur-med) var(--ease-out);
 }
 
@@ -521,6 +522,7 @@
   display: grid;
   gap: var(--space-xs);
   flex: 1;
+  align-content: baseline;
 }
 
 .project-card__category {
