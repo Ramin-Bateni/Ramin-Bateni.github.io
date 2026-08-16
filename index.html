@@ -72,16 +72,22 @@
 
       <div class="nav__actions">
         <div class="nav__socials">
-          <a class="nav__social" href="https://github.com/Ramin-Bateni" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
-            <i data-lucide="github" aria-hidden="true"></i>
+          <a class="nav__social" href="https://github.com/Ramin-Bateni" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" title="GitHub profile">
+            <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor"
+                d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.24c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.74.08-.74 1.2.09 1.83 1.23 1.83 1.23 1.07 1.83 2.8 1.3 3.48.99.11-.77.42-1.3.76-1.6-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.47 11.47 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57A12 12 0 0 0 12 .5Z" />
+            </svg>
           </a>
-          <a class="nav__social" href="http://linkedin.com/in/ramin-bateni-parvar" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
-            <i data-lucide="linkedin" aria-hidden="true"></i>
+          <a class="nav__social" href="http://linkedin.com/in/ramin-bateni-parvar" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" title="LinkedIn profile">
+            <svg class="social-icon" viewBox="0 0 256 256" aria-hidden="true">
+              <path fill="currentColor"
+                d="M218.123 218.127h-37.931v-59.403c0-14.165-.253-32.4-19.728-32.4-19.756 0-22.779 15.434-22.779 31.369v60.43h-37.93V95.967h36.413v16.694h.51a39.907 39.907 0 0 1 35.928-19.733c38.445 0 45.533 25.288 45.533 58.186l-.016 67.013ZM56.955 79.27c-12.157 0-22.014-9.852-22.016-22.009-.002-12.157 9.851-22.014 22.008-22.016 12.157-.003 22.014 9.851 22.016 22.008A22.013 22.013 0 0 1 56.955 79.27Zm18.966 138.858H37.95V95.967h37.97v122.16ZM237.033.018H18.89C8.58-.098.125 8.161-.001 18.471v219.053c.122 10.315 8.576 18.582 18.89 18.474h218.144c10.336.128 18.823-8.139 18.966-18.474V18.454C255.852 8.124 247.366-.134 237.033.018Z" />
+            </svg>
           </a>
-          <a class="nav__social" href="https://stackoverflow.com/users/1474613/ramin-bateni" target="_blank" rel="noopener noreferrer" aria-label="Stack Overflow profile">
+          <a class="nav__social" href="https://stackoverflow.com/users/1474613/ramin-bateni" target="_blank" rel="noopener noreferrer" aria-label="Stack Overflow profile" title="Stack Overflow profile">
             <i data-lucide="code-2" aria-hidden="true"></i>
           </a>
-          <a class="nav__social" href="mailto:Ram_20designer@yahoo.com" aria-label="Send an email">
+          <a class="nav__social" href="mailto:Ram_20designer@yahoo.com" aria-label="Send an email" title="Send an email">
             <i data-lucide="mail" aria-hidden="true"></i>
           </a>
         </div>
@@ -174,10 +180,30 @@
           </div>
         </dl>
       </div>
+    </section>
 
-      <div class="hero__scroll">
-        <span class="hero__scroll-line" aria-hidden="true"></span>
-        scroll
+    <!-- ================= PROJECTS ================= -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-head" data-aos="fade-up">
+          <p class="eyebrow">$ ls ./projects --filter</p>
+          <h2 class="section-title">Some Portfolios</h2>
+          <p class="section-desc">
+            Real modules and software products created in production level for different clients and companies.
+          </p>
+        </div>
+    
+        <div class="filters" role="group" aria-label="Filter projects by category">
+          <button class="filter-pill is-active" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-pill" data-filter="ai" aria-pressed="false">AI</button>
+          <button class="filter-pill" data-filter="automation" aria-pressed="false">Automation</button>
+          <button class="filter-pill" data-filter="n8n" aria-pressed="false">n8n</button>
+          <button class="filter-pill" data-filter="fullstack" aria-pressed="false">Full Stack</button>
+          <button class="filter-pill" data-filter="architecture" aria-pressed="false">Architecture</button>
+        </div>
+    
+        <div class="projects__grid" aria-live="polite"></div>
+        <p class="projects__empty">No projects match this filter yet.</p>
       </div>
     </section>
 
@@ -343,31 +369,6 @@
       </div>
     </section>
 
-    <!-- ================= PROJECTS ================= -->
-    <section class="section" id="projects">
-      <div class="container">
-        <div class="section-head" data-aos="fade-up">
-          <p class="eyebrow">$ ls ./projects --filter</p>
-          <h2 class="section-title">Some Portfolios</h2>
-          <p class="section-desc">
-            Real modules and software products created in production level for different clients and companies.
-          </p>
-        </div>
-
-        <div class="filters" role="group" aria-label="Filter projects by category">
-          <button class="filter-pill is-active" data-filter="all" aria-pressed="true">All</button>
-          <button class="filter-pill" data-filter="ai" aria-pressed="false">AI</button>
-          <button class="filter-pill" data-filter="automation" aria-pressed="false">Automation</button>
-          <button class="filter-pill" data-filter="n8n" aria-pressed="false">n8n</button>
-          <button class="filter-pill" data-filter="fullstack" aria-pressed="false">Full Stack</button>
-          <button class="filter-pill" data-filter="architecture" aria-pressed="false">Architecture</button>
-        </div>
-
-        <div class="projects__grid" aria-live="polite"></div>
-        <p class="projects__empty">No projects match this filter yet.</p>
-      </div>
-    </section>
-
     <!-- ================= EXPERIENCE ================= -->
     <section class="section" id="experience">
       <div class="container">
@@ -493,14 +494,22 @@
             <a class="btn btn--ghost" href="https://t.me/ramin_btn" target="_blank" rel="noopener noreferrer">
               <i data-lucide="send" aria-hidden="true"></i> Telegram
             </a>
-            <a class="btn btn--ghost" href="http://linkedin.com/in/ramin-bateni-parvar" target="_blank" rel="noopener noreferrer">
-              <i data-lucide="linkedin" aria-hidden="true"></i> LinkedIn
+            <a class="btn btn--ghost" href="https://linkedin.com/in/ramin-bateni-parvar" target="_blank" rel="noopener noreferrer">
+            <svg class="social-icon" viewBox="0 0 256 256" aria-hidden="true">
+              <path fill="currentColor"
+                d="M218.123 218.127h-37.931v-59.403c0-14.165-.253-32.4-19.728-32.4-19.756 0-22.779 15.434-22.779 31.369v60.43h-37.93V95.967h36.413v16.694h.51a39.907 39.907 0 0 1 35.928-19.733c38.445 0 45.533 25.288 45.533 58.186l-.016 67.013ZM56.955 79.27c-12.157 0-22.014-9.852-22.016-22.009-.002-12.157 9.851-22.014 22.008-22.016 12.157-.003 22.014 9.851 22.016 22.008A22.013 22.013 0 0 1 56.955 79.27Zm18.966 138.858H37.95V95.967h37.97v122.16ZM237.033.018H18.89C8.58-.098.125 8.161-.001 18.471v219.053c.122 10.315 8.576 18.582 18.89 18.474h218.144c10.336.128 18.823-8.139 18.966-18.474V18.454C255.852 8.124 247.366-.134 237.033.018Z" />
+            </svg>
+              LinkedIn
+            </a>            
+            <a class="btn btn--ghost" href="https://github.com/Ramin-Bateni" target="_blank" rel="noopener noreferrer">
+              <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor"
+                  d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.24c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.74.08-.74 1.2.09 1.83 1.23 1.83 1.23 1.07 1.83 2.8 1.3 3.48.99.11-.77.42-1.3.76-1.6-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.47 11.47 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57A12 12 0 0 0 12 .5Z" />
+              </svg>
+              GitHub
             </a>
             <a class="btn btn--ghost" href="https://stackoverflow.com/users/1474613/ramin-bateni" target="_blank" rel="noopener noreferrer">
               <i data-lucide="code-2" aria-hidden="true"></i> Stack Overflow
-            </a>
-            <a class="btn btn--ghost" href="https://github.com/Ramin-Bateni" target="_blank" rel="noopener noreferrer">
-              <i data-lucide="github" aria-hidden="true"></i> GitHub
             </a>
           </div>
         </div>
